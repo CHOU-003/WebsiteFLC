@@ -14,6 +14,8 @@
 - **Định tuyến**: Điều hướng dễ dàng với `react-router-dom`.
 - **Phát triển và thử nghiệm**: Quy trình làm việc hiệu quả với `react-scripts`.
 
+
+
 ## Cài đặt
 
 ### Điều kiện tiên quyết
@@ -54,10 +56,7 @@ Kiểm tra
 Chạy các bài kiểm tra với:
 
 npm test
-
-
-Đây là một cách trình bày thông tin một cách chuyên nghiệp và dễ đọc, phù hợp cho một tệp `README.md`. Hãy chắc chắn rằng bạn đã thay thế URL kho lưu trữ GitHub thực tế của bạn trước khi sử dụng nội dung này.
-
+```
 
 # Server
 
@@ -119,4 +118,3 @@ node index.js
 
 
 Đây là một cách trình bày thông tin một cách chuyên nghiệp và dễ đọc, phù hợp cho một tệp `README.md`. Hãy chắc chắn rằng bạn đã thay thế URL kho lưu trữ GitHub thực tế của bạn trước khi sử dụng nội dung này.
-
