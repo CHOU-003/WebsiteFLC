@@ -57,3 +57,66 @@ npm test
 
 
 Đây là một cách trình bày thông tin một cách chuyên nghiệp và dễ đọc, phù hợp cho một tệp `README.md`. Hãy chắc chắn rằng bạn đã thay thế URL kho lưu trữ GitHub thực tế của bạn trước khi sử dụng nội dung này.
+
+
+# Server
+
+## Giới thiệu
+Dự án này hỗ trợ xử lý dữ liệu trực tiếp từ yêu cầu client thông qua api, với sự hỗ trợ của `routing` từ framework `express.js` và model tạo nên từ `Schema` của `MongoDB` tạo nên một hệ thống xử lý chính xác các yêu cầu từ View đồng thời còn giúp dự án linh hoạt, dễ dàng mở rộng. 
+
+## Tính năng
+
+- **Framework**: express.js giúp đơn giản hóa việc xây dựng ứng dụng web api. Với chức năng cốt lỗi routing, nó cho phép bạn định nghĩa các trình xử lý cho các đường dẫn URL và phương thức HTTP khác nhau (GET, POST, PUT, DELETE). 
+- **Cơ sở dữ liệu**:  mongoDB giúp website linh hoạt và dễ mở rộng.
+
+## Cài đặt
+
+### Điều kiện tiên quyết
+
+Yêu cầu cài đặt `Node.js` và `mongodb`
+
+Cài đặt Node.js và MongoDB:
+
+Node.js: Tải xuống và cài đặt phiên bản mới nhất của Node.js từ https://nodejs.org/en/download.
+MongoDB: Tải xuống và cài đặt MongoDB Community Server cho hệ điều hành của bạn từ https://www.mongodb.com/docs/manual/installation/.
+
+1. Khởi tạo dự án Node.js:
+```bash
+npm i express
+```
+2. Cài đặt các gói Express và Mongoose bằng lệnh:
+```bash
+npm install express mongoose
+```
+3. Cấu hình kết nối MongoDB:
+  Tạo tệp `config/database.js` để lưu trữ thông tin kết nối MongoDB.
+  Thêm mã sau vào tệp `database.js`:
+```bash
+const mongoose = require('mongoose');
+
+const dbUrl = 'mongodb://localhost:27017/yourDatabaseName';
+
+mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => console.log('Connected to MongoDB database!'));
+
+module.exports = db;
+```
+Thay thế `yourDatabaseName` bằng tên cơ sở dữ liệu MongoDB của bạn.
+
+4.Chạy ứng dụng:
+
+Mở terminal hoặc command prompt trong thư mục dự án của bạn.
+Chạy lệnh:
+```bash
+node index.js
+```
+
+
+
+
+Đây là một cách trình bày thông tin một cách chuyên nghiệp và dễ đọc, phù hợp cho một tệp `README.md`. Hãy chắc chắn rằng bạn đã thay thế URL kho lưu trữ GitHub thực tế của bạn trước khi sử dụng nội dung này.
+
