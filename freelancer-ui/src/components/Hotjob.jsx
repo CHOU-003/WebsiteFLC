@@ -22,8 +22,8 @@ function Hotjob() {
                 <h1>CÔNG VIỆC ĐƯỢC QUAN TÂM NHẤT</h1>
                 
                 {projects.slice(0 , 3).map((project, index) => (
-                    <Link className="link" to={`/ungtuyen/${project._id}`}>
-                        <div className="jobin" key={index}>
+                    <Link key={project._id} className="link" to={`/ungtuyen/${project._id}`}>
+                        <div className="jobin" >
                         <h3>{project.ten_du_an}</h3>
                         <p>Nhóm Ngành: {project.nganh_nghe}</p>
                         <div className="content">

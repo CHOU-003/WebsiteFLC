@@ -631,9 +631,21 @@ html {
         }   
         
         
-        //ALLAUTH 
-        .allauth {
-            
+        //btn-in-chat
+        .btn-in-chat {
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 12px;
+            background-color: #5fb621;
+            color: white;
+            border-radius: 5px;
+        }
+
+
+        // Định nghĩa lớp cho phần tử số điện thoại
+        .phone-number {
+            font-size: 1rem;
+            color: #333;
         }
           
 
